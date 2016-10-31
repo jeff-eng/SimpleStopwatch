@@ -12,19 +12,34 @@ class ViewController: UIViewController {
 
     var currentTime = 0
     var timer = NSTimer()
+    var playPressed: Bool = false
     
     @IBOutlet weak var timerLabel: UILabel!
 
     @IBAction func play(sender: AnyObject) {
+        if playPressed == false {
         // launch timer here
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(increaseTimer), userInfo: nil, repeats: true)
+            runTimer()
+            
+            playPressed = true
+            print(playPressed)
+        } else if playPressed == true {
+            print("Play button was already pressed")
+        }
     }
     
     @IBAction func pause(sender: AnyObject) {
         timer.invalidate()
+        playPressed = false
     }
     
     @IBAction func reset(sender: AnyObject) {
+        // stop the timer from calling the increaseTimer function
+        timer.invalidate()
+        // set the currentTime variable back to zero
+        currentTime = 0
+        // reset the text of the timerLabel back to zero
+        timerLabel.text = "0"
     }
     
     override func viewDidLoad() {
@@ -37,10 +52,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-        func increaseTimer() {
-            currentTime += 1
-            timerLabel.text = "\(currentTime)"
-        }
+    func increaseTimer() {
+        currentTime += 1
+        timerLabel.text = "\(currentTime)"
+    }
+    
+    func runTimer() {
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(increaseTimer), userInfo: nil, repeats: true)
+    }
     
 }
 
