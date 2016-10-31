@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gML-RL-X07">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4A0-uJ-kFX"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Stopwatch" id="rwb-oF-ofc">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="OFs-jc-v6l"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="434-iy-eHa">
+                                <rect key="frame" x="153" y="223" width="294" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="r10-4s-tno"/>
+                                    <constraint firstAttribute="height" constant="153" id="t1S-1b-Yh6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="130"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbF-9c-poF">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="iDx-ne-Idh"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="D7h-cJ-AxE"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QMT-IN-zMT"/>
+                                    <barButtonItem systemItem="pause" id="jlQ-RH-Asw"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="434-iy-eHa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Agc-ba-UtI"/>
+                            <constraint firstItem="gML-RL-X07" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BH3-ie-4Iv"/>
+                            <constraint firstItem="434-iy-eHa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YaL-2l-Z4b"/>
+                            <constraint firstItem="gML-RL-X07" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="dBa-Nx-t8T"/>
+                            <constraint firstItem="DbF-9c-poF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="dCE-lD-ezV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gML-RL-X07" secondAttribute="trailing" constant="-20" id="ePP-ju-nXj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DbF-9c-poF" secondAttribute="trailing" constant="-20" id="lLy-MH-kV9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DbF-9c-poF" secondAttribute="bottom" id="oS1-FK-9rg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="339"/>
+        </scene>
+    </scenes>
+</document>
