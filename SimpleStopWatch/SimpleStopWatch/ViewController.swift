@@ -34,12 +34,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reset(sender: AnyObject) {
+        print("Reset button pressed")
         // stop the timer from calling the increaseTimer function
         timer.invalidate()
         // set the currentTime variable back to zero
         currentTime = 0
         // reset the text of the timerLabel back to zero
         timerLabel.text = "0"
+        // set the playPressed variable to false
+        playPressed = false
     }
     
     override func viewDidLoad() {
